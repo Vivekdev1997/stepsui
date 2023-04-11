@@ -1,0 +1,496 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #525151;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    accent-color: #8bc34a;
+}
+body {
+    background-color: #ECF0F5;
+}
+
+
+
+/*---------------scroll-------------------*/
+
+
+/*---------------scroll-------------------*/
+
+::-webkit-scrollbar {
+    width: 5px
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
+
+
+/*---------------scroll end-------------------*/
+
+
+/* =======================tabs ======================= */
+
+.tab-zen-wrap {
+    transition: 0.3s box-shadow ease;
+    border-radius: 6px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    /* margin: 40px 0; */
+    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
+}
+
+.tab-zen-wrap:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.tab-zen {
+    display: none;
+}
+
+.tab-zen:checked:nth-of-type(1)~.tab-zen__content:nth-of-type(1) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab-zen:checked:nth-of-type(2)~.tab-zen__content:nth-of-type(2) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab-zen:checked:nth-of-type(3)~.tab-zen__content:nth-of-type(3) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+    height: calc(100vh - 50vh);
+    overflow-y: auto;
+}
+
+.tab-zen:checked:nth-of-type(4)~.tab-zen__content:nth-of-type(4) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab-zen:checked:nth-of-type(5)~.tab-zen__content:nth-of-type(5) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+
+.tab-zen:first-of-type:not(:last-of-type)+label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.tab-zen:not(:first-of-type):not(:last-of-type)+label {
+    border-radius: 0;
+}
+
+.tab-zen:last-of-type:not(:first-of-type)+label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tab-zen:checked+label {
+    background-color: #fff;
+    box-shadow: 0 -1px 0 #fff inset;
+    cursor: default;
+}
+
+.tab-zen:checked+label:hover {
+    box-shadow: 0 -1px 0 #fff inset;
+    background-color: #fff;
+}
+
+.tab-zen+label {
+    box-shadow: 0 -1px 0 #eee inset;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    flex-grow: 3;
+    text-align: center;
+    background-color: #f8f9fa;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.tab-zen+label:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 1px 0 #f4f4f4 inset;
+}
+
+.tab-zen__content {
+    padding: 10px 25px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    transform: translateY(-3px);
+    border-radius: 6px;
+}
+
+
+/* boring stuff */
+
+
+/* =======================tabs  end======================= */
+
+
+/* -----------------timeline css -------------------- */
+ 
+
+.bgcolumn table thead tr th,
+.bgcolumn table tfoot tr th {
+    font-weight: 500;
+}
+
+#progress-bar-container li .step-inner {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover {
+    color: #444;
+}
+
+#progress-bar-container li::after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #777;
+    margin: auto;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    margin-top: 45px;
+    box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.2);
+    transition: all ease 0.25s;
+}
+
+#progress-bar-container li:hover::after {
+    background: #555;
+}
+
+#progress-bar-container li.active::after {
+    background: #8BC34A;
+}
+
+#progress-bar-container #line {
+    width: 100%;
+    margin: auto;
+    background-color: #eee;
+    height: 6px;
+    position: absolute;
+    /* left: 10%; */
+    top: 57px;
+    z-index: 1;
+    border-radius: 50px;
+    transition: all ease 0.75s;
+}
+
+#progress-bar-container #line-progress {
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background-color: #8BC34A;
+    background: linear-gradient(to right #8BC34A 0%, #2ea3b7 100%);
+    position: absolute;
+    z-index: 2;
+    border-radius: 50px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.25);
+}
+
+#progress-content-section {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px;
+}
+
+#progress-content-section .section-content {
+    padding: 30px 40px;
+    /* text-align: center; */
+    height: calc(100vh - 30vh);
+    overflow-y: auto;
+}
+
+.section-content h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.section-content p {
+    font-size: 16px;
+    line-height: 1.8rem;
+    color: #777;
+}
+
+.section-content {
+    display: none;
+    animation: FadeinUp 0.7s ease 1 forwards;
+    transform: translateY(15px);
+    opacity: 0;
+}
+
+.section-content.active {
+    display: block;
+    opacity: 1;
+}
+
+.progress-wrapper {
+    margin: auto;
+    max-width: 100%;
+    height: calc(100vh - 11vh);
+}
+
+#progress-bar-container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    margin-top: 65px;
+    background-color: #fff;
+}
+
+#progress-bar-container ul {
+    padding-top: 15px;
+    z-index: 999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    background-color: #fff;
+}
+
+#progress-bar-container li::before {
+    content: " ";
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    transition: all ease 0.3s;
+    background-color: white;
+}
+
+
+/*#progress-bar-container li.active::before {
+    border: 2px solid #aaa;
+    background-color: #8BC34A;
+}*/
+
+#progress-bar-container li.active::before,
+#progress-bar-container li:hover::before {
+    border: 2px solid #aaa;
+    background-color: #8BC34A;
+}
+
+#progress-bar-container li {
+    list-style: none;
+    float: left;
+    width: 15rem;
+    text-align: center;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 60px;
+    position: relative;
+}
+
+@keyframes FadeInUp {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+/* -----------------timeline css end -------------------- */
+
+
+/*=================input type switch =================*/
+
+.onoffswitch {
+    position: relative;
+    width: 100px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: inline-block;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0px solid #999999;
+    border-radius: 0px;
+}
+
+.onoffswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner>div {
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner .onoffswitch-active {
+    padding-left: 15px;
+    background-color: #C2C2C2;
+    color: #FFFFFF;
+}
+
+.onoffswitch-inner .onoffswitch-inactive {
+    padding-right: 15px;
+    background-color: #C2C2C2;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    width: 40px;
+    margin: 0px;
+    text-align: center;
+    border: 0px solid #999999;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-weight: 200;
+    color: #fff;
+}
+
+.onoffswitch-active .onoffswitch-switch {
+    background: #4caf50;
+    left: 0;
+}
+
+.onoffswitch-inactive .onoffswitch-switch {
+    background: #A1A1A1;
+    right: 0;
+}
+
+.onoffswitch-active .onoffswitch-switch:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 40px;
+    border-style: solid;
+    border-color: #4caf50 transparent transparent #4caf50;
+    border-width: 15px 10px;
+}
+
+.onoffswitch-inactive .onoffswitch-switch:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 40px;
+    border-style: solid;
+    border-color: transparent #A1A1A1 #A1A1A1 transparent;
+    border-width: 15px 10px;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+
+/*=================input type switch end=================*/
+
+
+/*==============custom css===============*/
+
+.Search-Icon {
+    float: right;
+    margin-bottom: 5px;
+}
+
+.Search-Icon i {
+    color: #8bc34a;
+}

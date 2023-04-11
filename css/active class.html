@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>actice class</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	 
+	<div class="container">
+		<nav class="navecation">
+			<ul id="navi">
+				<li><a class="menu-line active" href="#">Home  </a></li>
+				<li><a class="menu-line" href="#">Contact  </a></li>
+				<li><a class="menu-line" href="#">Services</a></li>
+				<li><a class="menu-line" href="#">Contact Us</a></li>          
+			</ul>
+		</nav>
+	</div>
+
+<style type="text/css">
+ 
+ 
+.active{
+  background-color:#d90000;
+  color:#fff;
+
+}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		  $('.menu-line').click(function(){
+		    $('.menu-line').removeClass("active");
+		    $(this).addClass("active");
+		});
+});
+</script>
+
+
+
+
+	<body>
+</html>
